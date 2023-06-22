@@ -1,11 +1,20 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">Options API</router-link> |
+    <router-link to="/composition">Composition API</router-link>
+    <button name="click" @click='callme'> Click Me </button>
   </nav>
   <router-view/>
+ 
 </template>
 
+<script>
+export default{
+methods: {
+   callme() {
+  window.location.href = "https://www.cgvakindia.com/"
+} } }
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
