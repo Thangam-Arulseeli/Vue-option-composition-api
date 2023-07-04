@@ -27,6 +27,7 @@ export default{
   data(){
     return{
       newName: '',
+      productName: '',
       names: [
         {
           id: 1,
@@ -45,6 +46,7 @@ export default{
      },
    computed:{
       nameCount(){
+        this.productName = this.newName;  
         return this.names.length
       }
      },
@@ -56,7 +58,7 @@ export default{
           id: Date.now(),
           pname: this.newName
         }
-        this.names.push(temp)   
+        this.names.push(temp) 
         this.newName=''     
       },
         deleteName(index){
